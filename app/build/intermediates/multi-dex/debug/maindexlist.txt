@@ -251,8 +251,8 @@ android/support/v4/app/FragmentManager$OnBackStackChangedListener.class
 com/google/android/gms/dynamic/zzg$zza.class
 android/support/v7/app/ActionBar$Tab.class
 android/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase.class
-com/amazonaws/services/s3/internal/ServiceUtils.class
 com/amazonaws/services/sqs/AmazonSQSAsyncClient.class
+com/amazonaws/services/s3/internal/ServiceUtils.class
 android/support/v4/app/AppOpsManagerCompat.class
 com/google/android/gms/common/ConnectionResult.class
 com/amazonaws/mobile/downloader/service/DownloadFlags.class
@@ -383,9 +383,9 @@ android/support/v4/view/ViewCompatKitKat.class
 com/amazonaws/mobileconnectors/s3/transferutility/TransferService$UpdateHandler.class
 android/support/annotation/DrawableRes.class
 android/support/multidex/MultiDex$V4.class
-com/amazonaws/auth/DefaultAWSCredentialsProviderChain.class
-com/google/android/gms/common/GoogleApiAvailability.class
 com/amazonaws/mobileconnectors/s3/transfermanager/Transfer.class
+com/google/android/gms/common/GoogleApiAvailability.class
+com/amazonaws/auth/DefaultAWSCredentialsProviderChain.class
 android/support/v4/app/BackStackState.class
 android/support/v4/view/ViewCompat$GBViewCompatImpl.class
 android/support/design/widget/Snackbar$SnackbarLayout$OnAttachStateChangeListener.class

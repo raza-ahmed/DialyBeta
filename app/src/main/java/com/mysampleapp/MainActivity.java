@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button   signOutButton;
     private Button   signInButton;
+    private Button   TabActivityButton;
 
     /**
      * Initializes the Toolbar for use with the activity.
@@ -88,6 +89,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
+
+
     /**
      * Initializes the sign-in and sign-out buttons.
      */
@@ -98,6 +101,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         signInButton = (Button) findViewById(R.id.button_signin);
         signInButton.setOnClickListener(this);
+
+        TabActivityButton = (Button) findViewById(R.id.button_slide_activity);
+        TabActivityButton.setOnClickListener(this);
 
         final boolean isUserSignedIn = identityManager.isUserSignedIn();
         signOutButton.setVisibility(isUserSignedIn ? View.VISIBLE : View.INVISIBLE);
@@ -190,11 +196,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    public void sendMessage(View view)
-    {
-        Intent intent = new Intent(MainActivity.this, SplashActivity.class);
-        startActivity(intent);
-    }
+
 
     @Override
     public void onClick(final View view) {
@@ -212,6 +214,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (view == signInButton) {
             // Start the sign-in activity. Do not finish this activity to allow the user to navigate back.
             startActivity(new Intent(this, SignInActivity.class));
+            // Close the navigation drawer.
+            navigationDrawer.closeDrawer();
+            return;
+        }
+
+        if (view == TabActivityButton) {
+            // Start the sign-in activity. Do not finish this activity to allow the user to navigate back.
+            startActivity(new Intent(this, TabLayoutDialy.class));
             // Close the navigation drawer.
             navigationDrawer.closeDrawer();
             return;

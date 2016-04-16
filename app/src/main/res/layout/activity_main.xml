@@ -4,7 +4,8 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mysampleapp.MainActivity">
+    tools:context="com.mysampleapp.MainActivity"
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/main_content_layout"
@@ -23,11 +24,36 @@
             app:contentInsetStart="0dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
+
+
+
         <FrameLayout
             android:id="@+id/main_fragment_container"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"/>
+
+        <!-- TABLAYOUT CODE STARTS -->
+
+
+        <include layout="@layout/toolbar" android:id="@+id/main_toolbar"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"/>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/sliding_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            />
+
+
+        <!-- TABLAYOUT CODE ENDS -->
     </LinearLayout>
 
     <!-- navigation drawer -->
@@ -80,6 +106,7 @@
                 android:id="@+id/button_slide_activity"
                 android:layout_marginLeft="6dp"
                 android:layout_marginRight="6dp"
+
                 android:layout_below="@id/user_info"
                 android:layout_centerHorizontal="true" />
 
@@ -88,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/button_text_sign_in"
                 android:id="@+id/button_signin"
-                android:onClick="sendMessage"
+
                 android:layout_marginLeft="6dp"
                 android:layout_marginRight="6dp"
                 android:layout_below="@id/button_slide_activity"
@@ -110,4 +137,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
+
+
+
 </android.support.v4.widget.DrawerLayout>
