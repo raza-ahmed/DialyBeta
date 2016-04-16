@@ -18,7 +18,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/top_bar_background"
+            android:background="@color/blue"
             app:contentInsetEnd="0dp"
             app:contentInsetStart="0dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
@@ -76,11 +76,22 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/button_text_sign_in"
-                android:id="@+id/button_signin"
+                android:text="Tab Layout"
+                android:id="@+id/button_slide_activity"
                 android:layout_marginLeft="6dp"
                 android:layout_marginRight="6dp"
                 android:layout_below="@id/user_info"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_text_sign_in"
+                android:id="@+id/button_signin"
+                android:onClick="sendMessage"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_below="@id/button_slide_activity"
                 android:layout_centerHorizontal="true" />
             <Button
                 android:layout_width="fill_parent"
@@ -89,7 +100,7 @@
                 android:id="@+id/button_signout"
                 android:layout_marginLeft="6dp"
                 android:layout_marginRight="6dp"
-                android:layout_below="@id/user_info"
+                android:layout_below="@id/button_slide_activity"
                 android:layout_centerHorizontal="true" />
         </RelativeLayout>
         <ListView

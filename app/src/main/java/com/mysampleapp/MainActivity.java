@@ -190,6 +190,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    public void sendMessage(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, SplashActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public void onClick(final View view) {
         if (view == signOutButton) {
